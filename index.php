@@ -2,7 +2,7 @@
 $parola = $_GET['parola'];
 $censura = '***';
 $paragrafo = "Prova di testo, inizio lezioni php in data 21/06/2021. Oggi ha Palermo ci sono 36 gradi all'ombra porcaputtana, e io sono morto di caldo. Mi tocca in ogni caso lavorare al computer, ed svolgere l'esercizio lasciato per il pomeriggio!";
-$paragrafo_modificato = str_replace($parola, $censura, $paragrafo);
+$paragrafo_modificato = str_replace($parola, "***", $paragrafo);
 ?>
 
 
@@ -16,6 +16,7 @@ $paragrafo_modificato = str_replace($parola, $censura, $paragrafo);
 </head>
 <body>
     <h1>Un pomeriggio a Palermo</h1>
+
     <span><strong>Testo originale</strong></span>
     <p>
         <?php echo $paragrafo ?>
@@ -23,7 +24,9 @@ $paragrafo_modificato = str_replace($parola, $censura, $paragrafo);
     <div>
         <span>Lunghezza paragrafo: <?php echo strlen($paragrafo); ?></span>
     </div>
+
     <hr>
+
     <span><strong>Testo modificato</strong></span>
     <p>
         <?php echo $paragrafo_modificato; ?>
